@@ -8,6 +8,10 @@ class UserManagementSystem implements ForTesting {
     private Connection connection;
     private Scanner scanner;
 
+    public Connection getConnection() {
+        return this.connection;
+    }
+
     public UserManagementSystem() {
         scanner = new Scanner(System.in);
         connectToDatabase();
