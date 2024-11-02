@@ -32,3 +32,16 @@ to have functional code and coupled in the functionality of the project)
 implementing an interface.
 ● Indication: Inventiveness is encouraged in the choice of methods and transpose the requirements in
 practice (put yourself in the users' shoes)
+
+Bugfixes - urgent
+front-end
+- when adding users in the frontend there's not last name to add -> we get error when trying to add new user
+
+user controller
+- in the backend we have functionality to change firstname userService.updateFirstName but it's not implemented in frontend
+- there is not function to change the last name of a unser from the database
+- there is only functionality to run all test and give the response if it failled, we need functionality to run every test individually and show passed or failled and if we run all tests we need to be able to see which test passes and which fails
+
+tests
+- test is needed for changing the last name for a user already added
+
