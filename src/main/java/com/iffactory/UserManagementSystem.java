@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 // UserManagementSystem class to handle user management operations
-class UserManagementSystem implements ForTesting {
+class UserManagementSystem {
     private Connection connection;
     private Scanner scanner;
 
