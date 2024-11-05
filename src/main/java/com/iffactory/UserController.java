@@ -43,6 +43,13 @@ public class UserController {
         return ResponseEntity.ok("First name updated successfully");
     }
 
+    @PutMapping("/{id}/lastName")
+    public ResponseEntity<String> updateLastName(@PathVariable int id, @RequestBody String lastName) {
+        userService.updateLastName(id, lastName);
+        return ResponseEntity.ok("Last name updated successfully");
+}
+
+
     @PutMapping("/{id}/email")
     public ResponseEntity<String> updateEmail(@PathVariable int id, @RequestBody String email) {
         userService.updateEmail(id, email);

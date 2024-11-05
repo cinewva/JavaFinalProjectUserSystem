@@ -105,6 +105,20 @@ public class UserService {
         }
     }
 
+    public void updateLastName(int id, String newLastName) {
+        // Logic to find the user by id and update the last name
+        try {
+            String query = "UPDATE users SET last_name = ? WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, newLastName);
+            statement.setInt(2, id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating last name: " + e.getMessage());
+        }
+    }
+    
+
     public void updateEmail(int id, String newEmail) {
         try {
             String query = "UPDATE users SET email = ? WHERE id = ?";
